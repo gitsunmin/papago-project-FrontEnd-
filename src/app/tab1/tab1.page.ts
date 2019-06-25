@@ -43,5 +43,4 @@ export class Tab1Page {
     this._router.navigateByUrl('/');
   }
 
-
 }
