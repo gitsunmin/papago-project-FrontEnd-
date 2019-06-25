@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonService } from '../common/common.service';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  dataList:any = [];
+  constructor(private _commonService:CommonService) {
+    this.doDataList();
+  }
 
-  constructor() {}
-
+  doDataList(){
+    this._commonService.get().subscribe(res=>{
+      this.dataList = <any>res;
+    })
+  }
 }

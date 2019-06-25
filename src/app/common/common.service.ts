@@ -17,6 +17,10 @@ export class CommonService {
     return this._http.get("https://c.javajs.net/translation/"+source+"/"+target+"/"+text,{responseType:'text'});
   }
 
+  get(){
+    return this._http.get("https://c.javajs.net/translations");
+  }
+
 
 
 

@@ -6,4 +6,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-list>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label>count</ion-label>
+      <ion-label>소스 내용</ion-label>
+      <ion-label>타깃 내용</ion-label>
+    </ion-item>
+    <ion-item *ngFor="let data of dataList">
+      <ion-label>{{data.TH_COUNT}}</ion-label>
+      <ion-label>{{data.TH_TEXT}}</ion-label>
+      <ion-label>{{data.TH_RESPONSE}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
