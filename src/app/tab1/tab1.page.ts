@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonService } from '../common/common.service';
+import { Router } from '@angular/router';
 
 
 
@@ -28,13 +29,18 @@ export class Tab1Page {
   resDiv:string ='';
   langCodeList = ['ko','en','ja','zh-CN','zh-TW','vi','id','th','de','ru','es','it','fr'];
 
-  constructor(private _commonservice:CommonService) {}
+  constructor(private _commonservice:CommonService,
+    private _router:Router) {}
 
   doTranslation(){
     this._commonservice.doTranslation(this.source,this.target,this.text).subscribe(res=>{
       var response = JSON.parse(res);
       this.resDiv = response["TH_RESPONSE"];
     })
+  }
+
+  goHome(){
+    this._router.navigateByUrl('/');
   }
 
 
