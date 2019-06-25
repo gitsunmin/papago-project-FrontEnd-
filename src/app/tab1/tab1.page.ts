@@ -33,6 +33,18 @@ export class Tab1Page {
     private _router:Router) {}
 
   doTranslation(){
+    if(!this.source){
+      alert("source를 입력 해 주세요 .");
+      return ;
+    }
+    if(!this.target){
+      alert("target을 입력 해 주세요.");
+      return ; 
+    }
+    if(!this.text){
+      alert("text를 입력 해 주세요 . ");
+      return ; 
+    }
     this._commonservice.doTranslation(this.source,this.target,this.text).subscribe(res=>{
       var response = JSON.parse(res);
       this.resDiv = response["TH_RESPONSE"];
