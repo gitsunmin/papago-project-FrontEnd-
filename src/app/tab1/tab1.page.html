@@ -1,30 +1,35 @@
 <ion-header>
   <ion-toolbar>
-    <a href="">
-    <ion-img src="http://blogfiles.naver.net/MjAxOTAzMzFfMTM1/MDAxNTUzOTc5NTY5Nzk3.VY_eeDoB9JFdZRHiUVwXjXvV4wtSRiEgOXWMeorYkgUg.MHlJOdSAgQ7OE7x3G1sSeYxLU_L45IzyzN43diGGK4kg.JPEG.sxcffcxs/46003A13-7CB8-44C4-9BA4-D67FA01A4F9E-5308-0000064DD5832E17.jpg"></ion-img>
-  </a>
-      <ion-title>
+      <a href="">
+       <ion-img src="http://blogfiles.naver.net/MjAxOTAzMzFfMTM1/MDAxNTUzOTc5NTY5Nzk3.VY_eeDoB9JFdZRHiUVwXjXvV4wtSRiEgOXWMeorYkgUg.MHlJOdSAgQ7OE7x3G1sSeYxLU_L45IzyzN43diGGK4kg.JPEG.sxcffcxs/46003A13-7CB8-44C4-9BA4-D67FA01A4F9E-5308-0000064DD5832E17.jpg"></ion-img>
+      </a>
+      <ion-title align="center">
          파파고 번역기
       </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item>
+  <ion-item id="sourceItem">
     <ion-label position="floating">source</ion-label>
     <ion-select [(ngModel)]="source">
       <ion-select-option *ngFor="let lang of langCodeList" value="{{lang}}">{{lang}}</ion-select-option>
     </ion-select>
   </ion-item>
-  <ion-item>
+  <ion-icon class="arrowIcon" name="arrow-round-forward"></ion-icon>
+  <ion-item id="targetItem">
     <ion-label position="floating">target</ion-label>
     <ion-select [(ngModel)]="target">
       <ion-select-option *ngFor="let lang of langCodeList" value="{{lang}}">{{lang}}</ion-select-option>
     </ion-select>
   </ion-item>
+ 
   <ion-item>
     <ion-label position="floating">text</ion-label>
-    <ion-textarea [(ngModel)]="text"></ion-textarea>
+    <ion-textarea 
+    maxlength="1200"
+    auto-grow="true"
+     [(ngModel)]="text"></ion-textarea>
   </ion-item>
   <ion-button color="secondary" (click)="doTranslation()">번역하기</ion-button>
   <div padding id="resDiv">{{resDiv}}</div>

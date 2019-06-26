@@ -15,6 +15,7 @@ export class Tab2Page {
   doDataList(){
     this._commonService.get().subscribe(res=>{
       this.dataList = <any>res;
+      console.log(this.dataList);
     })
   }
 }

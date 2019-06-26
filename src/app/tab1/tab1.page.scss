@@ -3,6 +3,7 @@
   margin: 20px;
   font-size: 30px;
 }
+
 ion-button{
   width: 50%;
   font-size: 22px;
@@ -12,7 +13,28 @@ ion-content{
   text-align: center;
 }
 
+
+
 ion-label{
   font-size: 22px;
 }
 
+
+.arrowIcon{
+  font-size: 30px;
+}
+#sourceItem{
+  display: inline-block;
+  width:45%;
+}
+
+#targetItem{
+  width:45%;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 600px) {
+  ion-img {
+    display: none;
+  }
+}
