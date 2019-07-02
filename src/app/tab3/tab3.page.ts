@@ -7,6 +7,18 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  constructor() {
+    
+  }
+
+  goPage(url:string){
+    window.open(url, '_blank', 'location=yes');
+
+  }
+
+
+
+
+  
 
 }

@@ -7,21 +7,12 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-  </ion-list>
-  <ion-list>
-    <ion-item>
-      <ion-label>순위</ion-label>
-      <ion-label>소스 내용</ion-label>
-      <ion-label>타깃 내용</ion-label>
-      <ion-label>갯 수</ion-label>
-    </ion-item>
-    <ion-item *ngFor="let data of dataList">
-      <ion-label>{{data.COUNT_RANK}}</ion-label>
-      <ion-label>{{data.TH_TEXT}}</ion-label>
-      <ion-label>{{data.TH_RESPONSE}}</ion-label>
-      <ion-label>{{data.TH_COUNT}}</ion-label>
-    </ion-item>
-  </ion-list>
-
+  <ion-card *ngFor="let data of dataList">
+    <ion-card-header class="card-header">
+      <ion-card-title class="card-title"><b> {{data.COUNT_RANK}} 위</b></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>"{{data.TH_TEXT}}"의 내용을</ion-card-content>
+    <ion-card-content>"{{data.TH_RESPONSE}}"으로 번역을</ion-card-content>
+    <ion-card-content>{{data.TH_COUNT}}회 수행하였습니다.</ion-card-content>
+  </ion-card>
 </ion-content>

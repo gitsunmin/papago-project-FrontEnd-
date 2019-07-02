@@ -1,3 +1,14 @@
+ion-toolbar>div{
+  
+  text-align: center;
+}
+
+
+.papago_logo{
+  margin: auto;
+  width: 200px;
+}
+
 
 #resDiv{
   margin: 20px;
@@ -19,6 +30,7 @@ ion-label{
 
 .arrowIcon{
   font-size: 30px;
+  margin-top: 50px;
 }
 #sourceItem{
   display: inline-block;
@@ -34,6 +46,8 @@ ion-label{
   margin-left: 10px;
   margin-right: 10px;
 }
+
+
 
 @media only screen and (min-width: 600px) {
   ion-img {
