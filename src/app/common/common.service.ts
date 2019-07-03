@@ -11,13 +11,12 @@ export class CommonService {
     responseType:'text'
   })
   
-
-
   doTranslation(source:string, target:string, text:string){
-    return this._http.get("https://c.javajs.net/translation/"+source+"/"+target+"/"+text,{responseType:'text'});
+    return this._http
+    .get("https://c.javajs.net/translation/"+source+"/"+target+"/"+text,{responseType:'text'});
   }
 
-  get(){
+  getList(){
     return this._http.get("https://c.javajs.net/translations");
   }
 

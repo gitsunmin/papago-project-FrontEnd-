@@ -9,10 +9,14 @@
 <ion-content>
   <ion-card *ngFor="let data of dataList">
     <ion-card-header class="card-header">
-      <ion-card-title class="card-title"><b> {{data.COUNT_RANK}} 위</b></ion-card-title>
+      <ion-card-title class="card-title">
+        <b> {{data.COUNT_RANK}} 위</b>
+      </ion-card-title>
     </ion-card-header>
-    <ion-card-content>"{{data.TH_TEXT}}"의 내용을</ion-card-content>
-    <ion-card-content>"{{data.TH_RESPONSE}}"으로 번역을</ion-card-content>
-    <ion-card-content>{{data.TH_COUNT}}회 수행하였습니다.</ion-card-content>
+    <ion-card-content>
+      "{{data.TH_TEXT}}"의 내용을 <br>
+      "{{data.TH_RESPONSE}}"으로 번역을 <br>
+      {{data.TH_COUNT}}회 수행하였습니다. <br>
+    </ion-card-content>
   </ion-card>
 </ion-content>
